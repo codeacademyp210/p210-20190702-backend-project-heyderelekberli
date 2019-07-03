@@ -79,7 +79,7 @@ function CountUp(target, startVal, endVal, decimals, duration, options) {
     // Print value to target
     this.printValue = function(value) {
         var result = (!isNaN(value)) ? self.formatNumber(value) : '--';
-        if (self.d.tagName == 'INPUT') {
+        if (self.d.tagName == 'INPUT'){
             this.d.value = result;
         } 
         else if (self.d.tagName == 'text') {
