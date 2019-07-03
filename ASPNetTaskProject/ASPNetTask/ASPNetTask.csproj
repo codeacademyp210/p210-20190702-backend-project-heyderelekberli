@@ -121,6 +121,8 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InfoController.cs" />
+    <Compile Include="Controllers\PackageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -275,6 +277,7 @@
     <Content Include="Public\js\custom_js\course_schedule.js" />
     <Content Include="Public\js\custom_js\dashboard.js" />
     <Content Include="Public\js\custom_js\events.js" />
+    <Content Include="Public\js\custom_js\html5shiv.js" />
     <Content Include="Public\js\custom_js\jquery.card.js" />
     <Content Include="Public\js\custom_js\login1.js" />
     <Content Include="Public\js\custom_js\metisMenu.js" />
@@ -283,6 +286,7 @@
     <Content Include="Public\js\custom_js\packages.js" />
     <Content Include="Public\js\custom_js\payment.js" />
     <Content Include="Public\js\custom_js\portfolio.js" />
+    <Content Include="Public\js\custom_js\respond.min.js" />
     <Content Include="Public\js\custom_js\rooms.js" />
     <Content Include="Public\js\custom_js\single_user.js" />
     <Content Include="Public\js\custom_js\timings.js" />
@@ -521,8 +525,10 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Info\Index.cshtml" />
+    <Content Include="Views\Shared\_LayoutTemplete.cshtml" />
+    <Content Include="Views\Package\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
