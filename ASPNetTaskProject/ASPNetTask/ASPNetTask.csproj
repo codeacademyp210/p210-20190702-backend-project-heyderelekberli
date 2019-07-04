@@ -126,6 +126,8 @@
     <Compile Include="Controllers\PackageController.cs" />
     <Compile Include="Controllers\RoomsController.cs" />
     <Compile Include="Controllers\ScheduleController.cs" />
+    <Compile Include="Controllers\TrainersController.cs" />
+    <Compile Include="Controllers\UserListController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -525,6 +527,8 @@
     <Content Include="Views\Schedule\Index.cshtml" />
     <Content Include="Views\Courses\Index.cshtml" />
     <Content Include="Views\Rooms\Index.cshtml" />
+    <Content Include="Views\Trainers\Index.cshtml" />
+    <Content Include="Views\UserList\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
