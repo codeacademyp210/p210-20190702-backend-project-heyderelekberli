@@ -121,8 +121,10 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ClubInfoController.cs" />
+    <Compile Include="Controllers\CoursesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PackageController.cs" />
+    <Compile Include="Controllers\RoomsController.cs" />
     <Compile Include="Controllers\ScheduleController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -139,8 +141,6 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Public\404.html" />
-    <Content Include="Public\add_faq.html" />
-    <Content Include="Public\add_gallery.html" />
     <Content Include="Public\add_users.html" />
     <Content Include="Public\admin_addnews.html" />
     <Content Include="Public\admin_clubinfo.html" />
@@ -154,7 +154,6 @@
     <Content Include="Public\admin_usernews.html" />
     <Content Include="Public\admin_userpayment.html" />
     <Content Include="Public\admin_userprofile.html" />
-    <Content Include="Public\blank.html" />
     <Content Include="Public\courses.html" />
     <Content Include="Public\css\bootstrap.min.css" />
     <Content Include="Public\css\custom_css\404.css" />
@@ -189,15 +188,11 @@
     <Content Include="Public\css\custom_css\user_news.css" />
     <Content Include="Public\css\custom_css\user_profile.css" />
     <Content Include="Public\css\font-awesome.min.css" />
-    <Content Include="Public\events_list.html" />
-    <Content Include="Public\event_item.html" />
-    <Content Include="Public\faq.html" />
     <Content Include="Public\favicon.ico" />
     <Content Include="Public\fonts\fontawesome-webfont93e3.html" />
     <Content Include="Public\fonts\fontawesome-webfont93e3.svg" />
     <Content Include="Public\fonts\glyphicons-halflings-regular.html" />
     <Content Include="Public\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="Public\gallery.html" />
     <Content Include="Public\img\404.png" />
     <Content Include="Public\img\404bg.png" />
     <Content Include="Public\img\admin\event1.png" />
@@ -297,10 +292,7 @@
     <Content Include="Public\js\custom_js\user_payment.js" />
     <Content Include="Public\js\jquery.min.js" />
     <Content Include="Public\login.html" />
-    <Content Include="Public\news.html" />
-    <Content Include="Public\news_details.html" />
     <Content Include="Public\packages.html" />
-    <Content Include="Public\personal_training.html" />
     <Content Include="Public\profile_view.html" />
     <Content Include="Public\user_amntpayment.html" />
     <Content Include="Public\user_club_info.html" />
@@ -531,6 +523,8 @@
     <Content Include="Views\ClubInfo\Index.cshtml" />
     <Content Include="Views\Package\Index.cshtml" />
     <Content Include="Views\Schedule\Index.cshtml" />
+    <Content Include="Views\Courses\Index.cshtml" />
+    <Content Include="Views\Rooms\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

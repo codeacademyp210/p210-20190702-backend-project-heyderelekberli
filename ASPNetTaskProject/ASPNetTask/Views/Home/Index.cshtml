@@ -1,6 +1,22 @@
 ﻿@{
     ViewBag.Title = "Index";
 }
+
+@section Style{
+    <!-- page level css -->
+    <link type="text/css" href="~/Public/vendors/jquery-circliful/css/jquery.circliful.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" type="text/css" href="~/Public/vendors/jquery-plugin-circliful-master/css/jquery.circliful.css"> -->
+    <link type="text/css" href="~/Public/vendors/progressbar/css/bootstrap-progressbar.min.css" rel="stylesheet">
+    <link type="text/css" href="~/Public/vendors/fullcalendar/css/fullcalendar.css" rel="stylesheet">
+    <link type="text/css" href="~/Public/vendors/select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+    <link type="text/css" href="~/Public/css/custom_css/calendar_custom.css" rel="stylesheet">
+    <link type="text/css" href="~/Public/vendors/sweetalert/dist/sweetalert2.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="~/Public/vendors/nvd3chart/nv.d3.min.css">
+    <link type="text/css" href="~/Public/css/custom_css/fitness.css" rel="stylesheet" />
+    <link type="text/css" href="~/Public/css/custom_css/panel.css" rel="stylesheet" />
+    <link type="text/css" href="~/Public/css/custom_css/admin_dashboard.css" rel="stylesheet">
+    <!-- end of page level css -->
+}
 <aside class="right-side">
     <!-- Content Header (Page header) -->
     <!--section ends-->
@@ -368,5 +384,30 @@
         </div>
     </div>
     <!-- /#right -->
-    <!-- /.content -->
+    <!-- /.content -->B
 </aside>
+@section Script{
+    <script src="~/Public/js/custom_js/backstretch.js"></script>
+
+    <script src="~/Public/vendors/jquery-circliful/js/jquery.circliful.min.js" type="text/javascript"></script>
+    <script src="~/Public/vendors/progressbar/bootstrap-progressbar.min.js" type="text/javascript"></script>
+    <script src="~/Public/vendors/countUp/countUp.js" type="text/javascript"></script>
+    <script src="~/Public/vendors/moment/min/moment.min.js" type="text/javascript"></script>
+    <!-- date picker -->
+    <script src="~/Public/vendors/air-datepicker-master/dist/js/datepicker.min.js"></script>
+    <script src="~/Public/vendors/air-datepicker-master/dist/js/i18n/datepicker.en.js"></script>
+    <!-- date picker end -->
+    <script src="~/Public/vendors/sweetalert/dist/sweetalert2.js" type="text/javascript"></script>
+    <script src="~/Public/vendors/fullcalendar/fullcalendar.js" type="text/javascript"></script>
+    <script src="~/Public/vendors/d3-chart/d3.v3.min.js" type="text/javascript"></script>
+    <script src="~/Public/vendors/nvd3chart/nv.d3.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="~/Public/vendors/jquery-easy-ticker-master/jquery.easy-ticker.min.js"></script>
+    <script src="~/Public/vendors/inputmask/inputmask/inputmask.js" type="text/javascript"></script>
+    <script src="~/Public/vendors/inputmask/inputmask/jquery.inputmask.js" type="text/javascript"></script>
+    <script src="~/Public/vendors/inputmask/inputmask/inputmask.date.extensions.js" type="text/javascript"></script>
+    <script src="~/Public/js/custom_js/admin_index.js" type="text/javascript"></script>
+
+
+
+
+}
