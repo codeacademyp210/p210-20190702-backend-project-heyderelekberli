@@ -120,10 +120,17 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AddFaqController.cs" />
+    <Compile Include="Controllers\AddUserController.cs" />
     <Compile Include="Controllers\ClubInfoController.cs" />
     <Compile Include="Controllers\CoursesController.cs" />
+    <Compile Include="Controllers\Error404Controller.cs" />
+    <Compile Include="Controllers\FaqController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\PackageController.cs" />
+    <Compile Include="Controllers\PaymentsController.cs" />
+    <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\RoomsController.cs" />
     <Compile Include="Controllers\ScheduleController.cs" />
     <Compile Include="Controllers\TrainersController.cs" />
@@ -143,6 +150,7 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Public\404.html" />
+    <Content Include="Public\add_faq.html" />
     <Content Include="Public\add_users.html" />
     <Content Include="Public\admin_addnews.html" />
     <Content Include="Public\admin_clubinfo.html" />
@@ -190,6 +198,7 @@
     <Content Include="Public\css\custom_css\user_news.css" />
     <Content Include="Public\css\custom_css\user_profile.css" />
     <Content Include="Public\css\font-awesome.min.css" />
+    <Content Include="Public\faq.html" />
     <Content Include="Public\favicon.ico" />
     <Content Include="Public\fonts\fontawesome-webfont93e3.html" />
     <Content Include="Public\fonts\fontawesome-webfont93e3.svg" />
@@ -529,6 +538,13 @@
     <Content Include="Views\Rooms\Index.cshtml" />
     <Content Include="Views\Trainers\Index.cshtml" />
     <Content Include="Views\UserList\Index.cshtml" />
+    <Content Include="Views\Profile\Index.cshtml" />
+    <Content Include="Views\AddUser\Index.cshtml" />
+    <Content Include="Views\Payments\Index.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Error404\Index.cshtml" />
+    <Content Include="Views\Faq\Index.cshtml" />
+    <Content Include="Views\AddFaq\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

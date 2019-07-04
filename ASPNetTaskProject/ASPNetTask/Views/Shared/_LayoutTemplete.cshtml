@@ -283,7 +283,7 @@
                             </li>
                             <!-- Menu Body -->
                             <li class="pad-3">
-                                <a href="#">
+                                <a href="@Url.Action("Index","Profile")">
                                     <i class="fa fa-fw fa-user"></i> My Profile
                                 </a>
                             </li>
@@ -392,11 +392,11 @@
                                         <i class="text-primary fa fa-fw fa-users"></i> Users List
                                     </a>
                                 </li>
-                                <li>
+                                @*<li>
                                     <a href="@Url.Action("Index", "Profile")">
                                         <i class="text-success fa fa-fw fa-user"></i> User Profile
                                     </a>
-                                </li>
+                                </li>*@
                                 <li>
                                     <a href="@Url.Action("Index", "AddUser")">
                                         <i class="text-info fa fa-fw fa-user"></i> Add Users
@@ -410,13 +410,13 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="admin_login.html">
+                            <a href="@Url.Action("Index","Login")">
                                 <i class="text-danger menu-icon fa fa-sign-in"></i>
                                 <span class="mm-text">Login</span>
                             </a>
                         </li>
                         <li>
-                            <a href="404.html">
+                            <a href="@Url.Action("Index","Error404")">
                                 <i class="text-warning menu-icon fa fa-anchor"></i>
                                 <span class="mm-text">404</span>
                             </a>
@@ -429,12 +429,12 @@
                             </a>
                             <ul class="sub-menu">
                                 <li>
-                                    <a href="faq.html">
+                                    <a href="@Url.Action("Index","Faq")">
                                         <i class="text-primary fa fa-fw fa-question-circle"></i> FAQ
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="add_faq.html">
+                                    <a href="@Url.Action("Index","AddFaq")">
                                         <i class="text-success fa fa-fw fa-question"></i> Add Faq
                                     </a>
                                 </li>
