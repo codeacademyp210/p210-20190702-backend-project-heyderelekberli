@@ -129,22 +129,32 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
-    <Compile Include="Areas\Admin\Controllers\AddFaqController.cs" />
-    <Compile Include="Areas\Admin\Controllers\AddUserController.cs" />
     <Compile Include="Areas\Admin\Controllers\ClubInfoController.cs" />
     <Compile Include="Areas\Admin\Controllers\Error404Controller.cs" />
-    <Compile Include="Areas\Admin\Controllers\FaqController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\LoginController.cs" />
+    <Compile Include="Areas\Admin\Controllers\MainController.cs" />
     <Compile Include="Areas\Admin\Controllers\PackageController.cs" />
-    <Compile Include="Areas\Admin\Controllers\PaymentsController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProfileController.cs" />
     <Compile Include="Areas\Admin\Controllers\ScheduleController.cs" />
-    <Compile Include="Areas\Admin\Controllers\UserListController.cs" />
+    <Compile Include="Areas\Admin\Controllers\UserController.cs" />
+    <Compile Include="Areas\Admin\DAL\AdminContext.cs" />
+    <Compile Include="Areas\Admin\Models\ClubInfo.cs" />
+    <Compile Include="Areas\Admin\Models\HomeViewModel.cs" />
+    <Compile Include="Areas\Admin\Models\User.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201907051859074_create.cs" />
+    <Compile Include="Migrations\201907051859074_create.Designer.cs">
+      <DependentUpon>201907051859074_create.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201907051958218_addInfoTable.cs" />
+    <Compile Include="Migrations\201907051958218_addInfoTable.Designer.cs">
+      <DependentUpon>201907051958218_addInfoTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -857,20 +867,13 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\Admin\Views\web.config" />
-    <Content Include="Areas\Admin\Views\AddUser\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Error404\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Faq\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Login\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Package\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Payments\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Profile\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Rooms\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Schedule\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\Error.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_LayoutTemplete.cshtml" />
-    <Content Include="Areas\Admin\Views\Trainers\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\UserList\Index.cshtml" />
     <Content Include="Public\fonts\fontawesome-webfont93e3.eot" />
     <Content Include="Public\fonts\fontawesome-webfont93e3.ttf" />
     <Content Include="Public\fonts\fontawesome-webfont93e3.woff" />
@@ -890,11 +893,13 @@
     <Content Include="Areas\Admin\Public\fonts\glyphicons-halflings-regulard41d.eot" />
     <Content Include="Areas\Admin\Views\ClubInfo\Index.cshtml" />
     <Content Include="Areas\Admin\Views\AddFaq\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Courses\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Schedule\Rooms.cshtml" />
     <Content Include="Areas\Admin\Views\Schedule\CourseSchedule.cshtml" />
     <Content Include="Areas\Admin\Views\Schedule\Courses.cshtml" />
     <Content Include="Areas\Admin\Views\Schedule\Trainers.cshtml" />
+    <Content Include="Areas\Admin\Views\User\UsersList.cshtml" />
+    <Content Include="Areas\Admin\Views\User\AddUser.cshtml" />
+    <Content Include="Areas\Admin\Views\User\Payments.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -923,7 +928,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Areas\Admin\Views\Main\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
@@ -941,6 +946,14 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201907051859074_create.resx">
+      <DependentUpon>201907051859074_create.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907051958218_addInfoTable.resx">
+      <DependentUpon>201907051958218_addInfoTable.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

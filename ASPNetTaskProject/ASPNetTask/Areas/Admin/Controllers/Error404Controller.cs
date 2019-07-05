@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace ASPNetTask.Areas.Admin.Controllers
 {
-    public class Error404Controller : Controller
+    public class Error404Controller : MainController
     {
         // GET: Admin/Error404
         public ActionResult Index()

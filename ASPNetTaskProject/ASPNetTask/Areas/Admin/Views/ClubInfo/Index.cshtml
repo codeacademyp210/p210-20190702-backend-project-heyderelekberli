@@ -1,4 +1,4 @@
-﻿
+﻿@model ASPNetTask.Areas.Admin.Models.HomeViewModel
 @{
     ViewBag.Title = "Index";
 }
@@ -90,49 +90,49 @@
                                                             <tr>
                                                                 <td>Username</td>
                                                                 <td>
-                                                                    <a href="#" data-pk="1" id="username" class="editable" data-title="Edit User Name" data-placeholder="Required">Nataliapery</a>
+                                                                    <a href="#" data-pk="1" id="username" class="editable" data-title="Edit User Name" data-placeholder="Required">@Model.ClubInfo.Username</a>
                                                                 </td>
                                                             </tr>
                                                             <tr>
                                                                 <td>E-mail</td>
                                                                 <td>
-                                                                    <a href="#" data-pk="1" class="editable" id="email" data-title="Edit E-mail" data-type="email" data-placeholder="Required">Nataliapery@example.com</a>
+                                                                    <a href="#" data-pk="1" class="editable" id="email" data-title="Edit E-mail" data-type="email" data-placeholder="Required">@Model.ClubInfo.Email</a>
                                                                 </td>
                                                             </tr>
                                                             <tr>
                                                                 <td>Phone Number</td>
                                                                 <td>
-                                                                    <a href="#" data-pk="1" class="editable" id="contact" data-title="Edit Phone Number" data-placeholder="Required">999-999-9999</a>
+                                                                    <a href="#" data-pk="1" class="editable" id="contact" data-title="Edit Phone Number" data-placeholder="Required">@Model.ClubInfo.PhoneNumber</a>
                                                                 </td>
                                                             </tr>
                                                             <tr>
                                                                 <td>Address</td>
                                                                 <td>
-                                                                    <a href="#" data-pk="1" id="addr" class="editable" data-title="Edit Address" data-placeholder="Required">Sydney, Australia</a>
+                                                                    <a href="#" data-pk="1" id="addr" class="editable" data-title="Edit Address" data-placeholder="Required">@Model.ClubInfo.Address</a>
                                                                 </td>
                                                             </tr>
                                                             <tr>
                                                                 <td>City</td>
                                                                 <td>
-                                                                    <a href="#" data-pk="1" id="city" class="editable" data-title="Edit City" data-placeholder="Required">Nakia</a>
+                                                                    <a href="#" data-pk="1" id="city" class="editable" data-title="Edit City" data-placeholder="Required">@Model.ClubInfo.City</a>
                                                                 </td>
                                                             </tr>
                                                             <tr>
                                                                 <td>Pincode</td>
                                                                 <td>
-                                                                    <a href="#" data-pk="1" id="pincode" class="editable" data-title="Edit Pincode" data-placeholder="Required">999999</a>
+                                                                    <a href="#" data-pk="1" id="pincode" class="editable" data-title="Edit Pincode" data-placeholder="Required">@Model.ClubInfo.Pincode</a>
                                                                 </td>
                                                             </tr>
                                                             <tr>
                                                                 <td>Fax</td>
                                                                 <td>
-                                                                    <a href="#" data-pk="1" id="fax" class="editable" data-title="Edit Fax">12345</a>
+                                                                    <a href="#" data-pk="1" id="fax" class="editable" data-title="Edit Fax">@Model.ClubInfo.Fax</a>
                                                                 </td>
                                                             </tr>
                                                             <tr>
                                                                 <td>Website</td>
                                                                 <td>
-                                                                    <a href="#" data-pk="1" id="url" class="editable" data-type="url" data-title="Edit Website">https://www.example.com</a>
+                                                                    <a href="#" data-pk="1" id="url" class="editable" data-type="url" data-title="Edit Website">@Model.ClubInfo.Website</a>
                                                                 </td>
                                                             </tr>
                                                         </table>

@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace ASPNetTask.Areas.Admin.Controllers
 {
-    public class ProfileController : Controller
+    public class ProfileController : MainController
     {
         // GET: Admin/Profile
         public ActionResult Index()

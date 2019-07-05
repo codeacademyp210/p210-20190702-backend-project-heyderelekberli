@@ -366,7 +366,7 @@
                                 <i class="text-warning menu-icon fa fa-fw fa-graduation-cap"></i>
                                 <span class="mm-text">Course Schedule</span>
                                 <span class="fa fa-angle-down pull-right"></span>
-                            
+
 
                             </a>
                             <ul class="sub-menu">
@@ -403,7 +403,7 @@
                                 <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Trainers" ? "active":"")">
                                     <a href="@Url.Action("Trainers", "Schedule")">
                                         <i class="text-danger fa fa-fw fa-paw"></i> Trainers
-                                        @if (ViewContext.RouteData.Values["Action"].ToString() == "Trainers")
+                                        @if (ViewContext.RouteData.Values["Action"].ToString() == "CourseSchedule")
                                         {
                                             <span class="arrow"></span>
                                         }
@@ -411,31 +411,40 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="menu-dropdown">
+                        <li class="menu-dropdown @(ViewContext.RouteData.Values["Action"].ToString() == "UsersList" || ViewContext.RouteData.Values["Action"].ToString() == "AddUser" || ViewContext.RouteData.Values["Action"].ToString() == "Payments"?"active":"")">
                             <a href="#">
                                 <i class="text-default menu-icon fa fa-fw fa-users"></i>
                                 <span class="mm-text">Users</span>
                                 <span class="fa fa-angle-down pull-right"></span>
                             </a>
                             <ul class="sub-menu">
-                                <li>
-                                    <a href="@Url.Action("Index", "UserList")">
+                                <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "UserList" ? "active":"")">
+
+                                    <a href="@Url.Action("UsersList", "User")">
                                         <i class="text-primary fa fa-fw fa-users"></i> Users List
+                                        @if (ViewContext.RouteData.Values["Action"].ToString() == "UsersList")
+                                        {
+                                            <span class="arrow"></span>
+                                        }
                                     </a>
                                 </li>
-                                @*<li>
-                    <a href="@Url.Action("Index", "Profile")">
-                        <i class="text-success fa fa-fw fa-user"></i> User Profile
-                    </a>
-                </li>*@
-                                <li>
-                                    <a href="@Url.Action("Index", "AddUser")">
+                                <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "AddUser" ? "active":"")">
+
+                                    <a href="@Url.Action("AddUser", "User")">
                                         <i class="text-info fa fa-fw fa-user"></i> Add Users
+                                        @if (ViewContext.RouteData.Values["Action"].ToString() == "AddUser")
+                                        {
+                                            <span class="arrow"></span>
+                                        }
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="@Url.Action("Index", "Payments")">
+                                <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Payments" ? "active":"")">
+                                    <a href="@Url.Action("Payments", "User")">
                                         <i class="text-danger fa fa-fw fa-money"></i> Payments
+                                        @if (ViewContext.RouteData.Values["Action"].ToString() == "Payments")
+                                        {
+                                            <span class="arrow"></span>
+                                        }
                                     </a>
                                 </li>
                             </ul>
@@ -451,25 +460,6 @@
                                 <i class="text-warning menu-icon fa fa-anchor"></i>
                                 <span class="mm-text">404</span>
                             </a>
-                        </li>
-                        <li class="menu-dropdown">
-                            <a href="#">
-                                <i class="text-success menu-icon fa fa-fw fa-question-circle"></i>
-                                <span class="mm-text">FAQ</span>
-                                <span class="fa fa-angle-down pull-right"></span>
-                            </a>
-                            <ul class="sub-menu">
-                                <li>
-                                    <a href="@Url.Action("Index","Faq")">
-                                        <i class="text-primary fa fa-fw fa-question-circle"></i> FAQ
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="@Url.Action("Index","AddFaq")">
-                                        <i class="text-success fa fa-fw fa-question"></i> Add Faq
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
                     </ul>
                     <!-- / .navigation -->

@@ -6,24 +6,21 @@ using System.Web.Mvc;
 
 namespace ASPNetTask.Areas.Admin.Controllers
 {
-    public class ScheduleController : MainController
+    public class UserController : MainController
     {
-       
-        public ActionResult Rooms()
+        // GET: Admin/User
+        public ActionResult UsersList()
         {
             return View();
         }
-        public ActionResult CourseSchedule()
+        public ActionResult AddUser()
         {
             return View();
         }
-        public ActionResult Courses()
+        public ActionResult Payments()
         {
             return View();
         }
-        public ActionResult Trainers()
-        {
-            return View();
-        }
+    
     }
 }

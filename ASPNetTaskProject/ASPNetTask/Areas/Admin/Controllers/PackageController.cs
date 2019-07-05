@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace ASPNetTask.Areas.Admin.Controllers
 {
-    public class PackageController : Controller
+    public class PackageController : MainController
     {
         // GET: Admin/Package
         public ActionResult Index()
