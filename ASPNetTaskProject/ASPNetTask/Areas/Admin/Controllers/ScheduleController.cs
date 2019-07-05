@@ -8,8 +8,20 @@ namespace ASPNetTask.Areas.Admin.Controllers
 {
     public class ScheduleController : Controller
     {
-        // GET: Admin/Schedule
-        public ActionResult Index()
+       
+        public ActionResult Rooms()
+        {
+            return View();
+        }
+        public ActionResult CourseSchedule()
+        {
+            return View();
+        }
+        public ActionResult Courses()
+        {
+            return View();
+        }
+        public ActionResult Trainers()
         {
             return View();
         }
