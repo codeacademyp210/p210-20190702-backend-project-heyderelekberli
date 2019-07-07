@@ -1,4 +1,5 @@
-﻿@{
+﻿@model ASPNetTask.Areas.Admin.Models.HomeViewModel
+@{
     ViewBag.Title = "Index";
 }
 
@@ -164,13 +165,15 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @foreach (var pack in Model.Package)
+                                    {
                                     <tr>
-                                        <td>Yoga</td>
-                                        <td>3 Months</td>
+                                        <td>@pack.Name</td>
+                                        <td>@pack.Duration</td>
                                         <td>
-                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                            @pack.Description
                                         </td>
-                                        <td>$60</td>
+                                        <td>$@pack.Amount</td>
                                         <td>
                                             <a class="edit btn btn-primary mar-bm" href="javascript:;">
                                                 <i class="fa fa-fw fa-edit"></i> Edit
@@ -182,60 +185,7 @@
                                             </a>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td>Body Building</td>
-                                        <td>2 Months</td>
-                                        <td>
-                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                        </td>
-                                        <td>$60</td>
-                                        <td>
-                                            <a class="edit btn btn-primary mar-bm" href="javascript:;">
-                                                <i class="fa fa-fw fa-edit"></i> Edit
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <a class="delete btn btn-danger mar-bm" href="javascript:;">
-                                                <i class="fa fa-trash-o"></i> Delete
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Fitness</td>
-                                        <td>1 Month</td>
-                                        <td>
-                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                        </td>
-                                        <td>$60</td>
-                                        <td>
-                                            <a class="edit btn btn-primary mar-bm" href="javascript:;">
-                                                <i class="fa fa-fw fa-edit"></i> Edit
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <a class="delete btn btn-danger mar-bm" href="javascript:;">
-                                                <i class="fa fa-trash-o"></i> Delete
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Aerobics</td>
-                                        <td>1 Month</td>
-                                        <td>
-                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                        </td>
-                                        <td>$60</td>
-                                        <td>
-                                            <a class="edit btn btn-primary mar-bm" href="javascript:;">
-                                                <i class="fa fa-fw fa-edit"></i> Edit
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <a class="delete btn btn-danger mar-bm" href="javascript:;">
-                                                <i class="fa fa-trash-o"></i> Delete
-                                            </a>
-                                        </td>
-                                    </tr>
+                                    }
                                 </tbody>
                             </table>
                         </div>

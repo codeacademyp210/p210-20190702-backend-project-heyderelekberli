@@ -154,6 +154,3 @@ C:\Users\Acer\Desktop\mvc\task\ASPNetTaskProject\ASPNetTask\bin\EntityFramework.
 C:\Users\Acer\Desktop\mvc\task\ASPNetTaskProject\ASPNetTask\bin\EntityFramework.xml
 C:\Users\Acer\Desktop\mvc\task\ASPNetTaskProject\ASPNetTask\bin\EntityFramework.SqlServer.xml
 C:\Users\Acer\Desktop\mvc\task\ASPNetTaskProject\ASPNetTask\obj\Debug\ASPNetTask.csprojAssemblyReference.cache
-C:\Users\Acer\Desktop\mvc\task\ASPNetTaskProject\ASPNetTask\obj\Debug\ASPNetTask.Migrations.create.resources
-C:\Users\Acer\Desktop\mvc\task\ASPNetTaskProject\ASPNetTask\obj\Debug\ASPNetTask.csproj.GenerateResource.cache
-C:\Users\Acer\Desktop\mvc\task\ASPNetTaskProject\ASPNetTask\obj\Debug\ASPNetTask.Migrations.addInfoTable.resources

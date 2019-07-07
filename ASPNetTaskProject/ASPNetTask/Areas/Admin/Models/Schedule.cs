@@ -12,18 +12,21 @@ namespace ASPNetTask.Areas.Admin.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class ClubInfo
+    public partial class Schedule
     {
         public int ID { get; set; }
-        public string Image { get; set; }
-        public string Username { get; set; }
-        public string Email { get; set; }
-        public string PhoneNumber { get; set; }
-        public string Address { get; set; }
-        public string City { get; set; }
-        public string Pincode { get; set; }
-        public string Fax { get; set; }
-        public string Website { get; set; }
+        public int DayID { get; set; }
+        public string From { get; set; }
+        public string To { get; set; }
+        public int CourseID { get; set; }
+        public int RoomID { get; set; }
+        public int TrainerID { get; set; }
+        public string Description { get; set; }
         public bool Status { get; set; }
+    
+        public virtual Cours Cours { get; set; }
+        public virtual Day Day { get; set; }
+        public virtual Room Room { get; set; }
+        public virtual Trainer Trainer { get; set; }
     }
 }

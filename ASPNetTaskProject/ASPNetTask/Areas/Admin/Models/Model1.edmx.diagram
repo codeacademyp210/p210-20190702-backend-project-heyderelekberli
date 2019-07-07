@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a3f2d01ea5494147acc5dd7e4ab3ccac" Name="Diagram1">
+        <EntityTypeShape EntityType="AdminConnectModel.ClubInfo" Width="1.5" PointX="7.75" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdminConnectModel.Cours" Width="1.5" PointX="0.75" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdminConnectModel.Day" Width="1.5" PointX="3.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdminConnectModel.Package" Width="1.5" PointX="8.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdminConnectModel.Payment" Width="1.5" PointX="3" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdminConnectModel.Room" Width="1.5" PointX="3.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdminConnectModel.Schedule" Width="1.5" PointX="6" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdminConnectModel.Trainer" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdminConnectModel.User" Width="1.5" PointX="0.75" PointY="8.5" IsExpanded="true" />
+        <AssociationConnector Association="AdminConnectModel.FK_dbo_Payments_dbo_Courses_CourseID" ManuallyRouted="false" />
+        <AssociationConnector Association="AdminConnectModel.FK_dbo_Schedules_dbo_Courses_CourseID" ManuallyRouted="false" />
+        <AssociationConnector Association="AdminConnectModel.FK_dbo_Schedules_dbo_Days_DayID" ManuallyRouted="false" />
+        <AssociationConnector Association="AdminConnectModel.FK_dbo_Payments_dbo_Trainers_TrainerID" ManuallyRouted="false" />
+        <AssociationConnector Association="AdminConnectModel.FK_dbo_Payments_dbo_Users_UserID" ManuallyRouted="false" />
+        <AssociationConnector Association="AdminConnectModel.FK_dbo_Schedules_dbo_Rooms_RoomID" ManuallyRouted="false" />
+        <AssociationConnector Association="AdminConnectModel.FK_dbo_Schedules_dbo_Trainers_TrainerID" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

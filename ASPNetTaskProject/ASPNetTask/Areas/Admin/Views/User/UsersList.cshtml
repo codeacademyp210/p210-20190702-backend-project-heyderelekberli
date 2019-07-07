@@ -1,4 +1,5 @@
-﻿
+﻿@model ASPNetTask.Areas.Admin.Models.HomeViewModel
+
 @{
     ViewBag.Title = "UsersList";
 }
@@ -77,11 +78,13 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @foreach (var user in Model.User)
+                                    {
                                     <tr>
-                                        <td>Bella</td>
-                                        <td>gankunding@hotmail.com</td>
-                                        <td>(999) 999-9999</td>
-                                        <td>Approved</td>
+                                        <td>@user.UserName</td>
+                                        <td>@user.Email</td>
+                                        <td>@user.ContactNumber</td>
+                                        <td>@user.Status</td>
                                         <td>
                                             <a class="edit btn btn-primary" href="javascript:;">
                                                 <i class="fa fa-fw fa-edit"></i> Edit
@@ -93,86 +96,7 @@
                                             </a>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td>JacobThornton</td>
-                                        <td>JacobThornton@test.com</td>
-                                        <td>+1-555-555-555</td>
-                                        <td>Pending</td>
-                                        <td>
-                                            <a class="edit btn btn-primary" href="javascript:;">
-                                                <i class="fa fa-fw fa-edit"></i> Edit
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <a class="delete btn btn-danger" href="javascript:;">
-                                                <i class="fa fa-trash-o"></i> Delete
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Markotto</td>
-                                        <td>Markotto@test.com</td>
-                                        <td>+1-999-999-999</td>
-                                        <td>Approved</td>
-                                        <td>
-                                            <a class="edit btn btn-primary" href="javascript:;">
-                                                <i class="fa fa-fw fa-edit"></i> Edit
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <a class="delete btn btn-danger" href="javascript:;">
-                                                <i class="fa fa-trash-o"></i> Delete
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Sonya</td>
-                                        <td>Sonya@test.com</td>
-                                        <td>+1-444-444-444</td>
-                                        <td>Blocked</td>
-                                        <td>
-                                            <a class="edit btn btn-primary" href="javascript:;">
-                                                <i class="fa fa-fw fa-edit"></i> Edit
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <a class="delete btn btn-danger" href="javascript:;">
-                                                <i class="fa fa-trash-o"></i> Delete
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Gavin</td>
-                                        <td>Gavin@test.com</td>
-                                        <td>+1-333-333-333</td>
-                                        <td>Approved</td>
-                                        <td>
-                                            <a class="edit btn btn-primary" href="javascript:;">
-                                                <i class="fa fa-fw fa-edit"></i> Edit
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <a class="delete btn btn-danger" href="javascript:;">
-                                                <i class="fa fa-trash-o"></i> Delete
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Timothy</td>
-                                        <td>Timothy@test.com</td>
-                                        <td>+1-222-222-222</td>
-                                        <td>Suspended</td>
-                                        <td>
-                                            <a class="edit btn btn-primary" href="javascript:;">
-                                                <i class="fa fa-fw fa-edit"></i> Edit
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <a class="delete btn btn-danger" href="javascript:;">
-                                                <i class="fa fa-trash-o"></i> Delete
-                                            </a>
-                                        </td>
-                                    </tr>
+                                    }
                                 </tbody>
                             </table>
                         </div>

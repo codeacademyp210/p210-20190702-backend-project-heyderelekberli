@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ASPNetTask.Areas.Admin.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,9 @@ namespace ASPNetTask.Areas.Admin.Controllers
         // GET: Admin/User
         public ActionResult UsersList()
         {
-            return View();
+            HomeViewModel models = new HomeViewModel();
+            models.User = db.Users.ToList();
+            return View(models);
         }
         public ActionResult AddUser()
         {
@@ -19,7 +22,9 @@ namespace ASPNetTask.Areas.Admin.Controllers
         }
         public ActionResult Payments()
         {
-            return View();
+            HomeViewModel models = new HomeViewModel();
+            models.Payment = db.Payments.ToList();
+            return View(models);
         }
     
     }

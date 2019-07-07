@@ -1,4 +1,4 @@
-﻿
+﻿@model ASPNetTask.Areas.Admin.Models.HomeViewModel
 @{
     ViewBag.Title = "Trainers";
 }
@@ -105,71 +105,23 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>Amanda Bale</td>
-                                        <td>
-                                            <a class=" edit btn btn-primary mar-bm" href="javascript:;">
-                                                <i class="fa fa-fw fa-edit"></i> Edit
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <a class="delete btn btn-danger mar-bm" href="javascript:;">
-                                                <i class="fa fa-trash-o"></i> Delete
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Alex Krasnov</td>
-                                        <td>
-                                            <a class=" edit btn btn-primary mar-bm" href="javascript:;">
-                                                <i class="fa fa-fw fa-edit"></i> Edit
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <a class="delete btn btn-danger mar-bm" href="javascript:;">
-                                                <i class="fa fa-trash-o"></i> Delete
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Alexande Bergunov</td>
-                                        <td>
-                                            <a class=" edit btn btn-primary mar-bm" href="javascript:;">
-                                                <i class="fa fa-fw fa-edit"></i> Edit
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <a class="delete btn btn-danger mar-bm" href="javascript:;">
-                                                <i class="fa fa-trash-o"></i> Delete
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Rachel Adams</td>
-                                        <td>
-                                            <a class=" edit btn btn-primary mar-bm" href="javascript:;">
-                                                <i class="fa fa-fw fa-edit"></i> Edit
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <a class="delete btn btn-danger mar-bm" href="javascript:;">
-                                                <i class="fa fa-trash-o"></i> Delete
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Rachel Adams</td>
-                                        <td>
-                                            <a class=" edit btn btn-primary mar-bm" href="javascript:;">
-                                                <i class="fa fa-fw fa-edit"></i> Edit
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <a class="delete btn btn-danger mar-bm" href="javascript:;">
-                                                <i class="fa fa-trash-o"></i> Delete
-                                            </a>
-                                        </td>
-                                    </tr>
+                                    @foreach (var train in Model.Trainer)
+
+                                    {
+                                        <tr>
+                                            <td>@train.Name</td>
+                                            <td>
+                                                <a class=" edit btn btn-primary mar-bm" href="javascript:;">
+                                                    <i class="fa fa-fw fa-edit"></i> Edit
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a class="delete btn btn-danger mar-bm" href="javascript:;">
+                                                    <i class="fa fa-trash-o"></i> Delete
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    }
                                 </tbody>
                             </table>
                         </div>

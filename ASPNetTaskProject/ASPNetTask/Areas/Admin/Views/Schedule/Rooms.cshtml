@@ -1,4 +1,4 @@
-﻿
+﻿@model ASPNetTask.Areas.Admin.Models.HomeViewModel
 @{
     ViewBag.Title = "Rooms";
 }
@@ -101,8 +101,10 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @foreach (var room in Model.Room)
+                                    {
                                     <tr>
-                                        <td>Room-A</td>
+                                        <td>@room.Name</td>
                                         <td>
                                             <a class=" edit btn btn-primary mar-bm" href="javascript:;">
                                                 <i class="fa fa-fw fa-edit"></i> Edit
@@ -114,58 +116,7 @@
                                             </a>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td>Room-B</td>
-                                        <td>
-                                            <a class=" edit btn btn-primary mar-bm" href="javascript:;">
-                                                <i class="fa fa-fw fa-edit"></i> Edit
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <a class="delete btn btn-danger mar-bm" href="javascript:;">
-                                                <i class="fa fa-trash-o"></i> Delete
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Room-E</td>
-                                        <td>
-                                            <a class="edit btn btn-primary mar-bm" href="javascript:;">
-                                                <i class="fa fa-fw fa-edit"></i> Edit
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <a class="delete btn btn-danger mar-bm" href="javascript:;">
-                                                <i class="fa fa-trash-o"></i> Delete
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Room-C</td>
-                                        <td>
-                                            <a class="edit btn btn-primary mar-bm" href="javascript:;">
-                                                <i class="fa fa-fw fa-edit"></i> Edit
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <a class="delete btn btn-danger mar-bm" href="javascript:;">
-                                                <i class="fa fa-trash-o"></i> Delete
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Room-D</td>
-                                        <td>
-                                            <a class="edit btn btn-primary mar-bm" href="javascript:;">
-                                                <i class="fa fa-fw fa-edit"></i> Edit
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <a class="delete btn btn-danger mar-bm" href="javascript:;">
-                                                <i class="fa fa-trash-o"></i> Delete
-                                            </a>
-                                        </td>
-                                    </tr>
+                                    }
                                 </tbody>
                             </table>
                         </div>

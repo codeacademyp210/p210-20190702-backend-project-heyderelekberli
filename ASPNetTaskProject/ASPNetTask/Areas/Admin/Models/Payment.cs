@@ -12,18 +12,19 @@ namespace ASPNetTask.Areas.Admin.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class ClubInfo
+    public partial class Payment
     {
         public int ID { get; set; }
-        public string Image { get; set; }
-        public string Username { get; set; }
+        public int UserID { get; set; }
+        public int CourseID { get; set; }
+        public int TrainerID { get; set; }
         public string Email { get; set; }
-        public string PhoneNumber { get; set; }
-        public string Address { get; set; }
-        public string City { get; set; }
-        public string Pincode { get; set; }
-        public string Fax { get; set; }
-        public string Website { get; set; }
+        public float Due { get; set; }
+        public float Amount { get; set; }
         public bool Status { get; set; }
+    
+        public virtual Cours Cours { get; set; }
+        public virtual Trainer Trainer { get; set; }
+        public virtual User User { get; set; }
     }
 }

@@ -1,4 +1,5 @@
-﻿
+﻿@model ASPNetTask.Areas.Admin.Models.HomeViewModel
+
 @{
     ViewBag.Title = "CourseSchedule";
 }
@@ -251,116 +252,32 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr>
-                                                    <td>Yoga</td>
-                                                    <td>Jane Austin</td>
-                                                    <td>Room-A</td>
-                                                    <td>10:00</td>
-                                                    <td>11:00</td>
-                                                    <td>
-                                                        <a class="edit btn btn-primary mar-bm" href="javascript:;">
-                                                            <i class="fa fa-fw fa-edit"></i> Edit
-                                                        </a>
-                                                    </td>
-                                                    <td>
-                                                        <a class="delete btn btn-danger mar-bm" href="javascript:;">
-                                                            <i class="fa fa-trash-o"></i> Delete
-                                                        </a>
-                                                    </td>
-                                                    <td>
-                                                        <a class="btn btn-warning mar-bm notification-alert" href="javascript:;">
-                                                            <i class="fa fa-fw fa-info-circle"></i> Notification
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Body Building</td>
-                                                    <td>Alex Krasnov</td>
-                                                    <td>Room-B</td>
-                                                    <td>10:30</td>
-                                                    <td>11:30</td>
-                                                    <td>
-                                                        <a class="edit btn btn-primary mar-bm" href="javascript:;">
-                                                            <i class="fa fa-fw fa-edit"></i> Edit
-                                                        </a>
-                                                    </td>
-                                                    <td>
-                                                        <a class="delete btn btn-danger mar-bm" href="javascript:;">
-                                                            <i class="fa fa-trash-o"></i> Delete
-                                                        </a>
-                                                    </td>
-                                                    <td>
-                                                        <a class="btn btn-warning mar-bm notification-alert" href="javascript:;">
-                                                            <i class="fa fa-fw fa-info-circle"></i> Notification
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Fitness</td>
-                                                    <td>Alexande Bergunov</td>
-                                                    <td>Room-C</td>
-                                                    <td>11:00</td>
-                                                    <td>12:00</td>
-                                                    <td>
-                                                        <a class="edit btn btn-primary mar-bm" href="javascript:;">
-                                                            <i class="fa fa-fw fa-edit"></i> Edit
-                                                        </a>
-                                                    </td>
-                                                    <td>
-                                                        <a class="delete btn btn-danger mar-bm" href="javascript:;">
-                                                            <i class="fa fa-trash-o"></i> Delete
-                                                        </a>
-                                                    </td>
-                                                    <td>
-                                                        <a class="btn btn-warning mar-bm notification-alert" href="javascript:;">
-                                                            <i class="fa fa-fw fa-info-circle"></i> Notification
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Aerobics</td>
-                                                    <td>Amanda Bale</td>
-                                                    <td>Room-D</td>
-                                                    <td>12:00</td>
-                                                    <td>13:00</td>
-                                                    <td>
-                                                        <a class="edit btn btn-primary mar-bm" href="javascript:;">
-                                                            <i class="fa fa-fw fa-edit"></i> Edit
-                                                        </a>
-                                                    </td>
-                                                    <td>
-                                                        <a class="delete btn btn-danger mar-bm" href="javascript:;">
-                                                            <i class="fa fa-trash-o"></i> Delete
-                                                        </a>
-                                                    </td>
-                                                    <td>
-                                                        <a class="btn btn-warning mar-bm notification-alert" href="javascript:;">
-                                                            <i class="fa fa-fw fa-info-circle"></i> Notification
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Flexibility</td>
-                                                    <td>Rachel Adams</td>
-                                                    <td>Room-E</td>
-                                                    <td>13:30</td>
-                                                    <td>14:00</td>
-                                                    <td>
-                                                        <a class="edit btn btn-primary mar-bm" href="javascript:;">
-                                                            <i class="fa fa-fw fa-edit"></i> Edit
-                                                        </a>
-                                                    </td>
-                                                    <td>
-                                                        <a class="delete btn btn-danger mar-bm" href="javascript:;">
-                                                            <i class="fa fa-trash-o"></i> Delete
-                                                        </a>
-                                                    </td>
-                                                    <td>
-                                                        <a class="btn btn-warning mar-bm notification-alert" href="javascript:;">
-                                                            <i class="fa fa-fw fa-info-circle"></i> Notification
-                                                        </a>
-                                                    </td>
-                                                </tr>
+                                                @foreach (var schedule in Model.Schedule)
+                                                {
+                                                    <tr>
+                                                        <td>@schedule.Cours.Name</td>
+                                                        <td>@schedule.Trainer.Name</td>
+                                                        <td>@schedule.Trainer.Name</td>
+                                                        <td>@schedule.From</td>
+                                                        <td>@schedule.To</td>
+                                                        <td>
+                                                            <a class="edit btn btn-primary mar-bm" href="javascript:;">
+                                                                <i class="fa fa-fw fa-edit"></i> Edit
+                                                            </a>
+                                                        </td>
+                                                        <td>
+                                                            <a class="delete btn btn-danger mar-bm" href="javascript:;">
+                                                                <i class="fa fa-trash-o"></i> Delete
+                                                            </a>
+                                                        </td>
+                                                        <td>
+                                                            <a class="btn btn-warning mar-bm notification-alert" href="javascript:;">
+                                                                <i class="fa fa-fw fa-info-circle"></i> Notification
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                }
+
                                             </tbody>
                                         </table>
                                     </div>

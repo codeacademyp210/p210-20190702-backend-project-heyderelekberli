@@ -1,4 +1,5 @@
-﻿
+﻿@model ASPNetTask.Areas.Admin.Models.HomeViewModel
+
 @{
     ViewBag.Title = "Payments";
 }
@@ -94,54 +95,17 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @foreach (var pay in Model.Payment)
+                                    {
                                     <tr>
-                                        <td>Bella</td>
-                                        <td>Yoga</td>
-                                        <td>John Doe</td>
-                                        <td>gankunding@hotmail.com</td>
-                                        <td>$20</td>
-                                        <td>$60</td>
+                                        <td>@pay.User.UserName</td>
+                                        <td>@pay.Cours.Name</td>
+                                        <td>@pay.Trainer.Name</td>
+                                        <td>@pay.Email</td>
+                                        <td>$@pay.Due</td>
+                                        <td>$@pay.Amount</td>
                                     </tr>
-                                    <tr>
-                                        <td>JacobThornton</td>
-                                        <td>Fitness</td>
-                                        <td>Clara S.Roberson</td>
-                                        <td>JacobThornton@test.com</td>
-                                        <td>$10</td>
-                                        <td>$80</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Markotto</td>
-                                        <td>Aerobics</td>
-                                        <td>Dominick Williams</td>
-                                        <td>Markotto@test.com</td>
-                                        <td>$50</td>
-                                        <td>$00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Sonya</td>
-                                        <td>Body Building</td>
-                                        <td>Darin Gross</td>
-                                        <td>Sonya@test.com</td>
-                                        <td>$20</td>
-                                        <td>$100</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Gavin</td>
-                                        <td>Yoga</td>
-                                        <td>John Doe</td>
-                                        <td>Gavin@test.com</td>
-                                        <td>$30</td>
-                                        <td>$40</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Timothy</td>
-                                        <td>Life Time Membership</td>
-                                        <td>Clara S.Roberson</td>
-                                        <td>Timothy@test.com</td>
-                                        <td>$50</td>
-                                        <td>$100</td>
-                                    </tr>
+                                    }
                                 </tbody>
                             </table>
                         </div>
