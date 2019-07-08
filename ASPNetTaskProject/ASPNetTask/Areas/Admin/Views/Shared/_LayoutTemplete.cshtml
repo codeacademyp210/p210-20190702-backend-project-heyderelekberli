@@ -302,7 +302,7 @@
                                     </a>
                                 </div>
                                 <div class="pull-right">
-                                    <a href="login.html">
+                                    <a href="@Url.Action("Logout", "Security")">
                                         <i class="fa fa-fw fa-sign-out"></i> Logout
                                     </a>
                                 </div>
@@ -462,12 +462,13 @@
                                 <span class="mm-text">404</span>
                             </a>
                         </li>
-                        @*<li>
-                            <a href="@Url.Action("Index","Schedules")">
-                                <i class="text-warning menu-icon fa fa-anchor"></i>
-                                <span class="mm-text">404</span>
+                        <li>
+                            <a href="@Url.Action("Logout","Security")">
+                                <i class="text-warning menu-icon fa fa-sign-out"></i>
+                                <span class="mm-text">Log Out</span>
                             </a>
-                        </li>*@
+                        </li>
+
                     </ul>
                     <!-- / .navigation -->
                 </div>

@@ -21,6 +21,7 @@
         <AssociationConnector Association="AdminConnectModel.FK_dbo_Payments_dbo_Users_UserID" ManuallyRouted="false" />
         <AssociationConnector Association="AdminConnectModel.FK_dbo_Schedules_dbo_Rooms_RoomID" ManuallyRouted="false" />
         <AssociationConnector Association="AdminConnectModel.FK_dbo_Schedules_dbo_Trainers_TrainerID" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="AdminConnectModel.Log" Width="1.5" PointX="8.375" PointY="5.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -34,5 +34,6 @@ namespace ASPNetTask.Areas.Admin.Models
         public virtual DbSet<Schedule> Schedules { get; set; }
         public virtual DbSet<Trainer> Trainers { get; set; }
         public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<Log> Logs { get; set; }
     }
 }

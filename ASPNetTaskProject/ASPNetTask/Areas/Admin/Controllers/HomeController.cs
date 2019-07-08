@@ -7,9 +7,9 @@ using System.Web.Mvc;
 
 namespace ASPNetTask.Areas.Admin.Controllers
 {
+    [Authorize]
     public class HomeController : MainController
     {
-        // GET: Admin/Home
         public ActionResult Index()
         {
             HomeViewModel models = new HomeViewModel();

@@ -1,0 +1,123 @@
+﻿@model ASPNetTask.Areas.Admin.Models.Schedule
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutTemplete.cshtml";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+<div class="form-horizontal">
+    <div class="form-group">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <label class="col-md-3 control-label" for="day">
+            Day
+            <span class='require'>*</span>
+        </label>
+        <div class="col-md-7">
+            @Html.DropDownList("DayID", null, htmlAttributes: new { @class = "form-control", name = "day", id = "day" })
+            @Html.ValidationMessageFor(model => model.Day.Name, "", new { @class = "text-danger" })
+
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.From, htmlAttributes: new { @class = "control-label col-md-3", @for = "from" })
+        <div class="col-md-3">
+            <div class='input-group date' id='datetimepicker4'>
+                @Html.EditorFor(model => model.From, new { htmlAttributes = new { @class = "form-control", name = "time_from", id = "from" } })
+                @Html.ValidationMessageFor(model => model.From, "", new { @class = "text-danger" })
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-time"></span>
+                </span>
+            </div>
+        </div>
+        @Html.LabelFor(model => model.To, htmlAttributes: new { @class = "control-label col-md-1", @for = "to" })
+        <div class="col-md-3">
+            <div class='input-group date' id='datetimepicker5'>
+                @Html.EditorFor(model => model.To, new { htmlAttributes = new { @class = "form-control", name = "time_to", id = "to" } })
+                @Html.ValidationMessageFor(model => model.To, "", new { @class = "text-danger" })
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-time"></span>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.CourseID, "CourseID", htmlAttributes: new { @class = "control-label col-md-3", @for = "courses" })
+
+        <div class="col-md-7">
+            @Html.DropDownList("CourseID", null, htmlAttributes: new { @class = "form-control", name = "course", id = "courses" })
+            @Html.ValidationMessageFor(model => model.CourseID, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.RoomID, "RoomID", htmlAttributes: new { @class = "control-label col-md-3", @for = "rooms" })
+        <div class="col-md-7">
+            @Html.DropDownList("RoomID", null, htmlAttributes: new { @class = "form-control", name = "rooms", id = "rooms" })
+            @Html.ValidationMessageFor(model => model.RoomID, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.TrainerID, "TrainerID", htmlAttributes: new { @class = "control-label col-md-3", @for = "traines" })
+
+        <div class="col-md-7">
+            @Html.DropDownList("TrainerID", null, htmlAttributes: new { @class = "form-control", name = "trainers", id = "traines" })
+            @Html.ValidationMessageFor(model => model.TrainerID, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-3" })
+
+        <label class="col-md-3 control-label">Description</label>
+        <div class="col-md-7">
+            @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "input-group" } })
+            <textarea class="summernote edi-css form-control" name="content"></textarea>
+
+            @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-7">
+            <div class="checkbox">
+                @Html.EditorFor(model => model.Status)
+                @Html.ValidationMessageFor(model => model.Status, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    @*<div class="form-group">
+        <label class="col-md-3 control-label">Share on Facebook</label>
+        <div class="col-md-7 social-check-box-icon">
+            <div class="input-group">
+                <input type="checkbox" class="mail-checkbox" required>
+            </div>
+        </div>
+    </div>*@
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Create" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+}
+@foreach (var item in Model.Room.Name)
+{
+    <p>@item</p>
+
+}
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

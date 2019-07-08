@@ -8,6 +8,7 @@ using System.Web.Mvc;
 
 namespace ASPNetTask.Areas.Admin.Controllers
 {
+ 
     public class MainController : Controller
     {
         protected AdminConnectEntities db;

@@ -1,6 +1,6 @@
 ﻿@model ASPNetTask.Areas.Admin.Models.Log
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Login";
     Layout = "";
 }
 
@@ -29,7 +29,7 @@
                 <img src="~/Areas/Admin/Public/img/logo.png" class="logo" alt="image not found">
                 <h3 class="text-center">User Log In</h3>
                 @ViewBag.Message
-                @using (Html.BeginForm("Login", "Security", FormMethod.Post, new { @class = "form", id = "log_in" }))
+                @using (Html.BeginForm("Login","Security", FormMethod.Post, new {@class="form", id="log_in" }))
                 {
                     <div class="form-group">
                         @Html.LabelFor(l => l.Username, new { @class = "sr-only" })

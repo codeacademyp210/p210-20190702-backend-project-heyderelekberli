@@ -48,22 +48,13 @@
                                     <th>User name</th>
                                     <th>Total</th>
                                 </tr>
-                                <tr>
-                                    <td>Gavin</td>
-                                    <td>$61.45</td>
-                                </tr>
-                                <tr>
-                                    <td>Bella</td>
-                                    <td>$50</td>
-                                </tr>
-                                <tr>
-                                    <td>Jacob</td>
-                                    <td>$10</td>
-                                </tr>
-                                <tr>
-                                    <td>Markotto</td>
-                                    <td>$80</td>
-                                </tr>
+                                @foreach (var total in Model.Payment)
+                                {
+                                    <tr>
+                                        <td>@total.User.UserName</td>
+                                        <td>$@(total.Due + total.Amount)</td>
+                                    </tr>
+                                }
                             </tbody>
                         </table>
                     </div>
