@@ -372,7 +372,7 @@
                             <ul class="sub-menu">
                                 <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "CourseSchedule" ? "active":"")">
 
-                                    <a href="@Url.Action("CourseSchedules", "Schedules")">
+                                    <a href="@Url.Action("CourseSchedule", "Schedule")">
                                         <i class="text-primary fa fa-fw fa-th"></i> Course Schedule
                                         @if (ViewContext.RouteData.Values["Action"].ToString() == "CourseSchedule")
                                         {
@@ -463,7 +463,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="@Url.Action("Logout","Security")">
+                            <a href="@Url.Action("Logout","Login")">
                                 <i class="text-warning menu-icon fa fa-sign-out"></i>
                                 <span class="mm-text">Log Out</span>
                             </a>
