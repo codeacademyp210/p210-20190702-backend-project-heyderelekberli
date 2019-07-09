@@ -132,13 +132,11 @@
     <Compile Include="Areas\Admin\Controllers\ClubInfoController.cs" />
     <Compile Include="Areas\Admin\Controllers\Error404Controller.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
-    <Compile Include="Areas\Admin\Controllers\InfoController.cs" />
     <Compile Include="Areas\Admin\Controllers\LoginController.cs" />
     <Compile Include="Areas\Admin\Controllers\MainController.cs" />
     <Compile Include="Areas\Admin\Controllers\PackageController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProfileController.cs" />
     <Compile Include="Areas\Admin\Controllers\ScheduleController.cs" />
-    <Compile Include="Areas\Admin\Controllers\SchedulesController.cs" />
     <Compile Include="Areas\Admin\Controllers\UserController.cs" />
     <Compile Include="Areas\Admin\Helpers\Auth.cs" />
     <Compile Include="Areas\Admin\Models\ClubInfo.cs">
@@ -204,22 +202,6 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
-    <Content Include="Areas\Admin\Public\404.html" />
-    <Content Include="Areas\Admin\Public\add_faq.html" />
-    <Content Include="Areas\Admin\Public\add_users.html" />
-    <Content Include="Areas\Admin\Public\admin_addnews.html" />
-    <Content Include="Areas\Admin\Public\admin_clubinfo.html" />
-    <Content Include="Areas\Admin\Public\admin_coupon.html" />
-    <Content Include="Areas\Admin\Public\admin_courseschedule.html" />
-    <Content Include="Areas\Admin\Public\admin_login.html" />
-    <Content Include="Areas\Admin\Public\admin_rooms.html" />
-    <Content Include="Areas\Admin\Public\admin_timings.html" />
-    <Content Include="Areas\Admin\Public\admin_trainers.html" />
-    <Content Include="Areas\Admin\Public\admin_userlist.html" />
-    <Content Include="Areas\Admin\Public\admin_usernews.html" />
-    <Content Include="Areas\Admin\Public\admin_userpayment.html" />
-    <Content Include="Areas\Admin\Public\admin_userprofile.html" />
-    <Content Include="Areas\Admin\Public\courses.html" />
     <Content Include="Areas\Admin\Public\css\bootstrap.min.css" />
     <Content Include="Areas\Admin\Public\css\custom_css\404.css" />
     <Content Include="Areas\Admin\Public\css\custom_css\add_faq.css" />
@@ -253,8 +235,6 @@
     <Content Include="Areas\Admin\Public\css\custom_css\user_news.css" />
     <Content Include="Areas\Admin\Public\css\custom_css\user_profile.css" />
     <Content Include="Areas\Admin\Public\css\font-awesome.min.css" />
-    <Content Include="Areas\Admin\Public\faq.html" />
-    <Content Include="Areas\Admin\Public\favicon.ico" />
     <Content Include="Areas\Admin\Public\fonts\fontawesome-webfont93e3.html" />
     <Content Include="Areas\Admin\Public\fonts\fontawesome-webfont93e3.svg" />
     <Content Include="Areas\Admin\Public\fonts\glyphicons-halflings-regular.html" />
@@ -323,7 +303,6 @@
     <Content Include="Areas\Admin\Public\img\loader-64x\Preloader_2.gif" />
     <Content Include="Areas\Admin\Public\img\login-bg1.png" />
     <Content Include="Areas\Admin\Public\img\logo.png" />
-    <Content Include="Areas\Admin\Public\index.html" />
     <Content Include="Areas\Admin\Public\js\bootstrap.min.js" />
     <Content Include="Areas\Admin\Public\js\carousel.js" />
     <Content Include="Areas\Admin\Public\js\custom_js\add_faq.js" />
@@ -357,22 +336,6 @@
     <Content Include="Areas\Admin\Public\js\custom_js\user_course_schedule.js" />
     <Content Include="Areas\Admin\Public\js\custom_js\user_payment.js" />
     <Content Include="Areas\Admin\Public\js\jquery.min.js" />
-    <Content Include="Areas\Admin\Public\login.html" />
-    <Content Include="Areas\Admin\Public\packages.html" />
-    <Content Include="Areas\Admin\Public\profile_view.html" />
-    <Content Include="Areas\Admin\Public\user_amntpayment.html" />
-    <Content Include="Areas\Admin\Public\user_club_info.html" />
-    <Content Include="Areas\Admin\Public\user_courses.html" />
-    <Content Include="Areas\Admin\Public\user_course_schedule.html" />
-    <Content Include="Areas\Admin\Public\user_eventitem.html" />
-    <Content Include="Areas\Admin\Public\user_eventslist.html" />
-    <Content Include="Areas\Admin\Public\user_faq.html" />
-    <Content Include="Areas\Admin\Public\user_forgot.html" />
-    <Content Include="Areas\Admin\Public\user_gallery.html" />
-    <Content Include="Areas\Admin\Public\user_index.html" />
-    <Content Include="Areas\Admin\Public\user_packages.html" />
-    <Content Include="Areas\Admin\Public\user_payments.html" />
-    <Content Include="Areas\Admin\Public\user_profile.html" />
     <Content Include="Areas\Admin\Public\vendors\air-datepicker-master\dist\css\datepicker.min.css" />
     <Content Include="Areas\Admin\Public\vendors\air-datepicker-master\dist\js\datepicker.min.js" />
     <Content Include="Areas\Admin\Public\vendors\air-datepicker-master\dist\js\i18n\datepicker.en.js" />
@@ -953,11 +916,6 @@
       <DependentUpon>Model1.edmx</DependentUpon>
     </Content>
     <Content Include="Areas\Admin\Views\Trainers\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Schedules\Create.cshtml" />
-    <Content Include="Areas\Admin\Views\Schedules\Delete.cshtml" />
-    <Content Include="Areas\Admin\Views\Schedules\Details.cshtml" />
-    <Content Include="Areas\Admin\Views\Schedules\Edit.cshtml" />
-    <Content Include="Areas\Admin\Views\Schedules\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Login\Index.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />

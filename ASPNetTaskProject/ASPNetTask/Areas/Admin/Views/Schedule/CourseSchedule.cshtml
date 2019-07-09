@@ -55,128 +55,236 @@
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <form id="courseschedule_form" action="#" class="form-horizontal">
-                                        <div class="form-body">
-                                            
+
+                                    @using (Html.BeginForm())
+                                    {
+                                        @Html.AntiForgeryToken()
+
+                                        <div class="form-horizontal">
                                             <div class="form-group">
+                                                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                                                 <label class="col-md-3 control-label" for="day">
                                                     Day
                                                     <span class='require'>*</span>
                                                 </label>
                                                 <div class="col-md-7">
-                                                    <select class="form-control" name="day" id="day">
-                                                        <option value>Select Day</option>
-                                                        <option value="1">Monday</option>
-                                                        <option value="2">Tuesday</option>
-                                                        <option value="3">Wednesday</option>
-                                                        <option value="4">Thursday</option>
-                                                        <option value="5">Friday</option>
-                                                        <option value="6">Saturday</option>
-                                                        <option value="7">Sunday</option>
-                                                    </select>
+                                                    @Html.DropDownList("DayID", null, htmlAttributes: new { @class = "form-control", name = "day", id = "day" })
+                                                    @Html.ValidationMessageFor(model => model.Day.Name, "", new { @class = "text-danger" })
+
                                                 </div>
                                             </div>
+
                                             <div class="form-group">
-                                                <label class="col-md-3 control-label" for="from">
-                                                    From
-                                                    <span class='require'>*</span>
-                                                </label>
+                                                @Html.LabelFor(model => model.From, htmlAttributes: new { @class = "control-label col-md-3", @for = "from" })
                                                 <div class="col-md-3">
                                                     <div class='input-group date' id='datetimepicker4'>
-                                                        <input type='text' class="form-control" name="time_from" id="from" />
+                                                        @Html.EditorFor(model => model.From, new { htmlAttributes = new { @class = "form-control", name = "time_from", id = "from" } })
+                                                        @Html.ValidationMessageFor(model => model.From, "", new { @class = "text-danger" })
                                                         <span class="input-group-addon">
                                                             <span class="glyphicon glyphicon-time"></span>
                                                         </span>
                                                     </div>
                                                 </div>
-                                                <label class="col-md-1 control-label" for="to">
-                                                    To
-                                                    <span class='require'>*</span>
-                                                </label>
+                                                @Html.LabelFor(model => model.To, htmlAttributes: new { @class = "control-label col-md-1", @for = "to" })
                                                 <div class="col-md-3">
                                                     <div class='input-group date' id='datetimepicker5'>
-                                                        <input type='text' class="form-control" name="time_to" id="to" />
+                                                        @Html.EditorFor(model => model.To, new { htmlAttributes = new { @class = "form-control", name = "time_to", id = "to" } })
+                                                        @Html.ValidationMessageFor(model => model.To, "", new { @class = "text-danger" })
                                                         <span class="input-group-addon">
                                                             <span class="glyphicon glyphicon-time"></span>
                                                         </span>
                                                     </div>
                                                 </div>
                                             </div>
+
                                             <div class="form-group">
-                                                <label class="col-md-3 control-label" for="courses">
-                                                    Courses
-                                                    <span class='require'>*</span>
-                                                </label>
+                                                @Html.LabelFor(model => model.CourseID, "CourseID", htmlAttributes: new { @class = "control-label col-md-3", @for = "courses" })
+
                                                 <div class="col-md-7">
-                                                    <select class="form-control" name="course" id="courses">
-                                                        <option value>Select Course</option>
-                                                        <option value="yoga">Yoga</option>
-                                                        <option value="fitness">Fitness</option>
-                                                        <option value="body_bulid">Body Building</option>
-                                                        <option value="aerobics">Aerobics</option>
-                                                        <option value="flexibility">Flexibility</option>
-                                                    </select>
+                                                    @Html.DropDownList("CourseID", null, htmlAttributes: new { @class = "form-control", name = "course", id = "courses" })
+                                                    @Html.ValidationMessageFor(model => model.CourseID, "", new { @class = "text-danger" })
                                                 </div>
                                             </div>
+
                                             <div class="form-group">
-                                                <label class="col-md-3 control-label" for="rooms">
-                                                    Rooms
-                                                    <span class='require'>*</span>
-                                                </label>
+                                                @Html.LabelFor(model => model.RoomID, "RoomID", htmlAttributes: new { @class = "control-label col-md-3", @for = "rooms" })
                                                 <div class="col-md-7">
-                                                    <select class="form-control" name="rooms" id="rooms">
-                                                        <option value="">Select Room</option>
-                                                        <option value="1">Room-A</option>
-                                                        <option value="2">Room-B</option>
-                                                        <option value="3">Room-C</option>
-                                                        <option value="4">Room-D</option>
-                                                        <option value="5">Room-E</option>
-                                                    </select>
+                                                    @Html.DropDownList("RoomID", null, htmlAttributes: new { @class = "form-control", name = "rooms", id = "rooms" })
+                                                    @Html.ValidationMessageFor(model => model.RoomID, "", new { @class = "text-danger" })
                                                 </div>
                                             </div>
+
                                             <div class="form-group">
-                                                <label class="col-md-3 control-label" for="traines">
-                                                    Trainers
-                                                    <span class='require'>*</span>
-                                                </label>
+                                                @Html.LabelFor(model => model.TrainerID, "TrainerID", htmlAttributes: new { @class = "control-label col-md-3", @for = "traines" })
+
                                                 <div class="col-md-7">
-                                                    <select class="form-control" name="trainers" id="traines">
-                                                        <option value>Select Trainer</option>
-                                                        <option value="1">Alexande Bergunov</option>
-                                                        <option value="2">Alex Krasnov</option>
-                                                        <option value="3">AAmanda Bale</option>
-                                                        <option value="4">Jane Austin</option>
-                                                        <option value="5">Rachel Adams</option>
-                                                    </select>
+                                                    @Html.DropDownList("TrainerID", null, htmlAttributes: new { @class = "form-control", name = "trainers", id = "traines" })
+                                                    @Html.ValidationMessageFor(model => model.TrainerID, "", new { @class = "text-danger" })
                                                 </div>
                                             </div>
+
+
                                             <div class="form-group">
+                                                @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-3" })
+
                                                 <label class="col-md-3 control-label">Description</label>
                                                 <div class="col-md-7">
-                                                    <div class="input-group">
-                                                        <textarea class="summernote edi-css form-control" name="content"></textarea>
-                                                    </div>
+                                                    @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "input-group" } })
+                                                    <textarea class="summernote edi-css form-control" name="content"></textarea>
+
+                                                    @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+
                                                 </div>
                                             </div>
+
                                             <div class="form-group">
-                                                <label class="col-md-3 control-label">Share on Facebook</label>
-                                                <div class="col-md-7 social-check-box-icon">
-                                                    <div class="input-group">
-                                                        <input type="checkbox" class="mail-checkbox" required>
+                                                <div class="col-md-7">
+                                                    <div class="checkbox">
+                                                        @Html.EditorFor(model => model.Status)
+                                                        @Html.ValidationMessageFor(model => model.Status, "", new { @class = "text-danger" })
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="form-actions">
-                                            <div class="row">
-                                                <div class="col-md-offset-3 col-md-7">
-                                                    <input type="submit" class="btn btn-primary" value="Add"> &nbsp;
-                                                    <input type="reset" class="btn btn-danger" value="Cancel"> &nbsp;
-                                                    <input type="reset" class="btn btn-default add-news-reset-editable" value="Reset">
+
+                                            @*<div class="form-group">
+                    <label class="col-md-3 control-label">Share on Facebook</label>
+                    <div class="col-md-7 social-check-box-icon">
+                        <div class="input-group">
+                            <input type="checkbox" class="mail-checkbox" required>
+                        </div>
+                    </div>
+                </div>*@
+
+                                            <div class="form-group">
+                                                <div class="col-md-offset-2 col-md-10">
+                                                    <input type="submit" value="Create" class="btn btn-default" />
                                                 </div>
                                             </div>
                                         </div>
-                                    </form>
+                                    }
+
+                                    @*<form id="courseschedule_form" action="#" class="form-horizontal">
+            <div class="form-body">
+
+                <div class="form-group">
+                    <label class="col-md-3 control-label" for="day">
+                        Day
+                        <span class='require'>*</span>
+                    </label>
+                    <div class="col-md-7">
+                        <select class="form-control" name="day" id="day">
+                            <option value>Select Day</option>
+                            <option value="1">Monday</option>
+                            <option value="2">Tuesday</option>
+                            <option value="3">Wednesday</option>
+                            <option value="4">Thursday</option>
+                            <option value="5">Friday</option>
+                            <option value="6">Saturday</option>
+                            <option value="7">Sunday</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-3 control-label" for="from">
+                        From
+                        <span class='require'>*</span>
+                    </label>
+                    <div class="col-md-3">
+                        <div class='input-group date' id='datetimepicker4'>
+                            <input type='text' class="form-control" name="time_from" id="from" />
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-time"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <label class="col-md-1 control-label" for="to">
+                        To
+                        <span class='require'>*</span>
+                    </label>
+                    <div class="col-md-3">
+                        <div class='input-group date' id='datetimepicker5'>
+                            <input type='text' class="form-control" name="time_to" id="to" />
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-time"></span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-3 control-label" for="courses">
+                        Courses
+                        <span class='require'>*</span>
+                    </label>
+                    <div class="col-md-7">
+                        <select class="form-control" name="course" id="courses">
+                            <option value>Select Course</option>
+                            <option value="yoga">Yoga</option>
+                            <option value="fitness">Fitness</option>
+                            <option value="body_bulid">Body Building</option>
+                            <option value="aerobics">Aerobics</option>
+                            <option value="flexibility">Flexibility</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-3 control-label" for="rooms">
+                        Rooms
+                        <span class='require'>*</span>
+                    </label>
+                    <div class="col-md-7">
+                        <select class="form-control" name="rooms" id="rooms">
+                            <option value="">Select Room</option>
+                            <option value="1">Room-A</option>
+                            <option value="2">Room-B</option>
+                            <option value="3">Room-C</option>
+                            <option value="4">Room-D</option>
+                            <option value="5">Room-E</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-3 control-label" for="traines">
+                        Trainers
+                        <span class='require'>*</span>
+                    </label>
+                    <div class="col-md-7">
+                        <select class="form-control" name="trainers" id="traines">
+                            <option value>Select Trainer</option>
+                            <option value="1">Alexande Bergunov</option>
+                            <option value="2">Alex Krasnov</option>
+                            <option value="3">AAmanda Bale</option>
+                            <option value="4">Jane Austin</option>
+                            <option value="5">Rachel Adams</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-3 control-label">Description</label>
+                    <div class="col-md-7">
+                        <div class="input-group">
+                            <textarea class="summernote edi-css form-control" name="content"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-3 control-label">Share on Facebook</label>
+                    <div class="col-md-7 social-check-box-icon">
+                        <div class="input-group">
+                            <input type="checkbox" class="mail-checkbox" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-actions">
+                <div class="row">
+                    <div class="col-md-offset-3 col-md-7">
+                        <input type="submit" class="btn btn-primary" value="Add"> &nbsp;
+                        <input type="reset" class="btn btn-danger" value="Cancel"> &nbsp;
+                        <input type="reset" class="btn btn-default add-news-reset-editable" value="Reset">
+                    </div>
+                </div>
+            </div>
+        </form>*@
                                 </div>
                             </div>
                         </div>
