@@ -1,6 +1,6 @@
 ﻿@model ASPNetTask.Areas.Admin.Models.Log
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Login";
     Layout = "";
 }
 
@@ -28,9 +28,7 @@
             <div class="box bounceInLeft animated">
                 <img src="~/Areas/Admin/Public/img/logo.png" class="logo" alt="image not found">
                 <h3 class="text-center">User Log In</h3>
-                @ViewBag.Message
-                @using (Html.BeginForm("Login", "Security", FormMethod.Post, new { @class = "form", id = "log_in" }))
-                {
+                <form class="form" action="@Url.Action("Login", "Login")" method="post">
                     <div class="form-group">
                         @Html.LabelFor(l => l.Username, new { @class = "sr-only" })
                         @Html.TextBoxFor(l => l.Username, new { @class = "form-control", name = "email", placeholder = "Email", required = true })
@@ -39,13 +37,18 @@
                         @Html.LabelFor(l => l.Password, new { @class = "sr-only" })
                         @Html.PasswordFor(l => l.Password, new { @class = "form-control", name = "password", placeholder = "Password", required = true })
                     </div>
+                    @if (@Session["loginError"]!= null)
+                    {
+                        <div class="alert alert-danger">@Session["Error"]</div>
+                        Session["loginError"] = null;
+                    }
                     <div class="checkbox text-left">
                         <label>
                             <input type="checkbox"> Remember Password
                         </label>
                     </div>
                     <input type="submit" class="btn btn-block btn-warning" value="Log In">
-                }
+                </form>
                 <p class="text-right"><a href="#" class="text-warning forgot_color" style="color: white">Forgot Password?</a></p>
             </div>
         </div>
@@ -61,6 +64,7 @@
     <!-- end of page level js -->
 </body>
 </html>
+
 
 
 

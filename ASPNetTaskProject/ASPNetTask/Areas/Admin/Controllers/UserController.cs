@@ -1,4 +1,5 @@
-﻿using ASPNetTask.Areas.Admin.Models;
+﻿using ASPNetTask.Areas.Admin.Helpers;
+using ASPNetTask.Areas.Admin.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,6 +8,7 @@ using System.Web.Mvc;
 
 namespace ASPNetTask.Areas.Admin.Controllers
 {
+    [Auth]
     public class UserController : MainController
     {
         // GET: Admin/User

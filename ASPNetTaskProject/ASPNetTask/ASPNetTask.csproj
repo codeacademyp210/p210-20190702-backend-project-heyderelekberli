@@ -139,8 +139,8 @@
     <Compile Include="Areas\Admin\Controllers\ProfileController.cs" />
     <Compile Include="Areas\Admin\Controllers\ScheduleController.cs" />
     <Compile Include="Areas\Admin\Controllers\SchedulesController.cs" />
-    <Compile Include="Areas\Admin\Controllers\SecurityController.cs" />
     <Compile Include="Areas\Admin\Controllers\UserController.cs" />
+    <Compile Include="Areas\Admin\Helpers\Auth.cs" />
     <Compile Include="Areas\Admin\Models\ClubInfo.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -915,7 +915,6 @@
     <Content Include="Areas\Admin\Views\web.config" />
     <Content Include="Areas\Admin\Views\Error404\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Login\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Package\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Profile\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\Error.cshtml" />
@@ -959,7 +958,7 @@
     <Content Include="Areas\Admin\Views\Schedules\Details.cshtml" />
     <Content Include="Areas\Admin\Views\Schedules\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Schedules\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Security\Login.cshtml" />
+    <Content Include="Areas\Admin\Views\Login\Index.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />

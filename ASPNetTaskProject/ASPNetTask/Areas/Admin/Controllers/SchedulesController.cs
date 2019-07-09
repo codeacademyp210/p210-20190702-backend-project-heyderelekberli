@@ -6,10 +6,12 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using ASPNetTask.Areas.Admin.Helpers;
 using ASPNetTask.Areas.Admin.Models;
 
 namespace ASPNetTask.Areas.Admin.Controllers
 {
+    [Auth]
     public class SchedulesController : Controller
     {
         private AdminConnectEntities db = new AdminConnectEntities();
